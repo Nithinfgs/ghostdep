@@ -1,0 +1,12 @@
+#!/usr/bin/env python3
+import sys
+from pathlib import Path
+
+# Add project root to sys.path so it works directly without install
+repo_root = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(repo_root))
+
+from ghostdep.cli import main
+
+if __name__ == "__main__":
+    sys.exit(main())
